@@ -1,0 +1,41 @@
+ # FORM VALIDATION CODE STRATS HERE FOR RULES #
+
+      $('#myForm').validate({
+   
+                    rules:{
+                       firstname: "required",
+                       lastname: "required",  
+                       
+                       username:{
+                           required: true,
+                           minlength: 5
+                       },
+                       password:{
+                           required:true,
+                           password: true
+                       },
+                      
+                    },
+
+
+# FORM VALIDATION MESSAGE CODE ENDS HERE#
+
+                });
+
+ # FORM VALIDATION MESSAGE CODE STARTS HERE#
+                messages: {
+                        firstname: "please enter your firstname",
+                        lastname: "please enter your lastname",
+                        username:{
+                            required: "Please enter your username",
+                            minlength: "username should not be lessthan 5 characters"
+                        },
+                        password:{
+                            required: "please enter your password"
+                        },
+                        
+                    }
+
+
+   
+   

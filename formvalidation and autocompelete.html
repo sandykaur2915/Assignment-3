@@ -1,0 +1,90 @@
+<html>
+      <title>MyForm</title>
+ <head>
+       <style>
+        body {
+            background-color: black;
+        }
+
+        .container {
+            background-color: gray;
+            margin: auto;
+            width: 48%;
+            border: 3px solid black;
+            padding: 10px;
+        }
+       
+       </style>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+        <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
+ </head>
+
+   <body>
+      <div class="container">
+             <h1>Registration Form</h1>
+         <form id="myForm" action="result.html">
+              
+              <legend><h2>Sign In</h2></legend>
+                   Firstname*:<input type="text" name="firstname" class="firstname" placeholder= "firstname">
+                   <br />
+                   <br />				
+				   Lastname*:<input type="text" name="lastname" class="lastname" placeholder="lastname">
+			       <br />
+                   <br />
+                   User Name*: <input type="text" name="username" class="username" placeholder="Username">
+                   <br />
+                   <br />
+                   Password*: <input type="password" name="password" class="password" placeholder="Password">
+                   <br />
+                   <br />
+                   Email: <input type="text" name="email" class="email" placeholder="someone@gmail.com">
+                   <br />
+                   <br />
+             
+
+              
+               <input type="submit"  name= "submit" value="Submit" >          
+
+         </form>
+
+          <script>
+              $('#myForm').validate({
+   
+                    rules:{
+                       firstname: "required",
+                       lastname: "required",  
+                       
+                       username:{
+                           required: true,
+                           minlength: 5
+                       },
+                       password:{
+                           required:true,
+                           password: true
+                       },
+                      
+                    },
+                    messages: {
+                        firstname: "please enter your firstname",
+                        lastname: "please enter your lastname",
+                        username:{
+                            required: "Please enter your username",
+                            minlength: "username should not be lessthan 5 characters"
+                        },
+                        password:{
+                            required: "please enter your password"
+                        },
+                        
+                    }
+                });
+         </script>
+       </div>
+  </body>
+</html>
+
+
+
+
+
+               
